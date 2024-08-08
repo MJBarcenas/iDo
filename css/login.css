@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 :root {
-    --primary-color: #fafafa;
-    --secondary-color: #fff9de;
+    --primary-color: #ffffff;
+    --secondary-color: #f5f6fa;
+    --accent-color: #6788ff;
+    --accent-color-darker: #677dff;
     --text-primary-color: #514e42;
 }
 
@@ -10,6 +13,15 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Lato";
+}
+
+a {
+    text-decoration: none;
+}
+
+body,
+html {
+    font-size: 13px;
 }
 
 main {
@@ -21,7 +33,117 @@ main {
 }
 
 .login-div {
-    padding: 1rem;
+    padding: 5rem;
     border-radius: 5px;
     background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-width: 500px;
+}
+
+.login-logo {
+    height: 4rem;
+    display: grid;
+    place-items: center;
+}
+
+.login-header {
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+.login-credentials {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.credential div {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 0 1rem;
+    border-radius: 5px;
+    margin-top: .5rem;
+}
+
+.credential div input {
+    border: none;
+    outline: none;
+    padding: 0 .3rem;
+    width: 100%;
+    background-color: inherit;
+    height: 3rem;
+}
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: .5rem;
+}
+
+.remember-me input {
+    cursor: pointer;
+}
+
+.login-button button {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: .75rem;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.login-button button:hover {
+    background-color: var(--accent-color-darker);
+}
+
+.login-option-divisor {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    height: 2px;
+    background-color: gray;
+}
+
+.divisor-text {
+    position: absolute;
+    transform: translateY(-50%);
+    padding: 0 .5rem;
+    left: 46.5%;
+    background-color: var(--secondary-color);
+}
+
+.login-with-options {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.login-with-options button {
+    border: none;
+    outline: none;
+    padding: .5rem 1.25rem;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.login-with-options svg {
+    height: 2rem;
+    width: 2rem;
+}
+
+.login-signup {
+    text-align: center;
 }
