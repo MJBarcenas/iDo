@@ -44,9 +44,13 @@ main {
 }
 
 .login-logo {
-    height: 4rem;
     display: grid;
     place-items: center;
+}
+
+.login-log img {
+    height: 4rem;
+    width: 4rem;
 }
 
 .login-header {
@@ -147,4 +151,14 @@ main {
 
 .login-signup {
     text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    .login-div {
+        height: 100dvh;
+        width: 100dvw;
+        min-width: unset;
+        padding: 2rem;
+        justify-content: center;
+    }
 }
